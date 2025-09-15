@@ -1,12 +1,14 @@
-# React + Vite
+##mySql query
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+create database kal;
 
-Currently, two official plugins are available:
+use kal;
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100) NOT NULL,
+email VARCHAR(150) NOT NULL UNIQUE,
+number VARCHAR(20) NOT NULL,
+subject VARCHAR(100) NOT NULL,
+branch VARCHAR(100) NOT NULL,
+password VARCHAR(255) NOT NULL,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
